@@ -179,48 +179,28 @@
 				</div>
 			</div>
 			<div class="row promo_container">
-
+			@php
+			$count=0;
+			@endphp
+			@foreach($items as $item)
+			@break($count==9)
 				<!-- Promo Item -->
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="images/promo_1.jpg" alt="">
+							<img src="{{$item['image']}}" alt="">
 							<div class="promo_content promo_content_1">
-								<div class="promo_title">-30% off</div>
-								<div class="promo_subtitle">on all bags</div>
+								<div class="promo_title">{{$item['name']}}</div>
+								<div class="promo_subtitle">{{$item['type']}}</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Shop Now</a></div>
+						<div class="promo_link"><a href="#">{{$item['rarity']}}</a></div>
 					</div>
 				</div>
-
-				<!-- Promo Item -->
-				<div class="col-lg-4 promo_col">
-					<div class="promo_item">
-						<div class="promo_image">
-							<img src="images/promo_2.jpg" alt="">
-							<div class="promo_content promo_content_2">
-								<div class="promo_title">-30% off</div>
-								<div class="promo_subtitle">coats & jackets</div>
-							</div>
-						</div>
-						<div class="promo_link"><a href="#">Shop Now</a></div>
-					</div>
-				</div>
-
-				<!-- Promo Item -->
-				<div class="col-lg-4 promo_col">
-					<div class="promo_item">
-						<div class="promo_image">
-							<img src="images/promo_3.jpg" alt="">
-							<div class="promo_content promo_content_3">
-								<div class="promo_title">-25% off</div>
-								<div class="promo_subtitle">on Sandals</div>
-							</div>
-						</div>
-						<div class="promo_link"><a href="#">Shop Now</a></div>
-					</div>
-				</div>
+				@php
+				$count++;
+				@endphp
+			@endforeach
 
 			</div>
 		</div>
@@ -239,84 +219,29 @@
 				</div>
 			</div>
 			<div class="row products_container">
-
-				<!-- Product -->
-				<div class="col-lg-4 product_col">
-					<div class="product">
-						<div class="product_image">
-							<img src="images/product_1.jpg" alt="">
-						</div>
-						<div class="rating rating_4">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product_content clearfix">
-							<div class="product_info">
-								<div class="product_name"><a href="product.html">Woman's Long Dress</a></div>
-								<div class="product_price">$45.00</div>
+				@php
+				$count=0;
+				@endphp
+				@foreach($itemsNuevos as $item)
+					@break($count==9)
+					<!-- Product -->
+					<div class="col-lg-4 product_col">
+						<div class="product">
+							<div class="product_image">
+								<img src="{{$item['image']}}" alt="">
 							</div>
-							<div class="product_options">
-								<div class="product_buy product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
-								<div class="product_fav product_option">+</div>
+							<div class="product_content clearfix">
+								<div class="product_info">
+									<div class="product_name"><a href="product.html">{{$item['rarity']}}</a></div>
+									<div class="product_price">{{$item['name']}}</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<!-- Product -->
-				<div class="col-lg-4 product_col">
-					<div class="product">
-						<div class="product_image">
-							<img src="images/product_2.jpg" alt="">
-						</div>
-						<div class="rating rating_4">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product_content clearfix">
-							<div class="product_info">
-								<div class="product_name"><a href="product.html">2 Piece Swimsuit</a></div>
-								<div class="product_price">$35.00</div>
-							</div>
-							<div class="product_options">
-								<div class="product_buy product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
-								<div class="product_fav product_option">+</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Product -->
-				<div class="col-lg-4 product_col">
-					<div class="product">
-						<div class="product_image">
-							<img src="images/product_3.jpg" alt="">
-						</div>
-						<div class="rating rating_4">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product_content clearfix">
-							<div class="product_info">
-								<div class="product_name"><a href="product.html">Man Blue Jacket</a></div>
-								<div class="product_price">$145.00</div>
-							</div>
-							<div class="product_options">
-								<div class="product_buy product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
-								<div class="product_fav product_option">+</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					@php
+					$count++;
+					@endphp
+				@endforeach
 
 			</div>
 		</div>
@@ -326,16 +251,11 @@
 
 	<div class="extra clearfix">
 		<div class="extra_promo extra_promo_1">
-			<div class="extra_promo_image" style="background-image:url(images/extra_1.jpg)"></div>
-			<div class="extra_1_content d-flex flex-column align-items-center justify-content-center text-center">
-				<div class="extra_1_price">30%<span>off</span></div>
-				<div class="extra_1_title">On all shoes</div>
-				<div class="extra_1_text">*Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra.</div>
-				<div class="button extra_1_button"><a href="checkout.html">check out</a></div>
-			</div>
+			<div class="extra_promo_image" style="background-image:url({{$data2['data']['images']['pois']}})"></div>
+			
 		</div>
-		<div class="extra_promo extra_promo_2">
-			<div class="extra_promo_image" style="background-image:url(images/extra_2.jpg)"></div>
+		<div class="extra_promo ">
+			
 			<div class="extra_2_content d-flex flex-column align-items-center justify-content-center text-center">
 				<div class="extra_2_title">
 					<div class="extra_2_center">&</div>
@@ -371,49 +291,14 @@
 			
 			<!-- Gallery Slider -->
 			<div class="owl-carousel owl-theme gallery_slider">
-				
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="images/gallery_1.jpg">
-						<img src="images/gallery_1.jpg" alt="">
-					</a>
-				</div>
-
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="images/gallery_2.jpg">
-						<img src="images/gallery_2.jpg" alt="">
-					</a>
-				</div>
-
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="images/gallery_3.jpg">
-						<img src="images/gallery_3.jpg" alt="">
-					</a>
-				</div>
-
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="images/gallery_4.jpg">
-						<img src="images/gallery_4.jpg" alt="">
-					</a>
-				</div>
-
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="images/gallery_5.jpg">
-						<img src="images/gallery_5.jpg" alt="">
-					</a>
-				</div>
-
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="images/gallery_6.jpg">
-						<img src="images/gallery_6.jpg" alt="">
-					</a>
-				</div>
-
+				@foreach($itemsBanner as $item)
+					<!-- Gallery Item -->
+					<div class="owl-item gallery_item">
+						<a class="colorbox" href="images/gallery_1.jpg">
+							<img src="{{$item['image']}}" alt="">
+						</a>
+					</div>
+				@endforeach
 			</div>
 		</div>	
 	</div>
