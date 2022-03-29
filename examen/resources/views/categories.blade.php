@@ -133,27 +133,27 @@
 
 						<!-- Categories -->
 						<div class="sidebar_section">
-							<div class="sidebar_title">Categories</div>
+							<div class="sidebar_title">Categorias</div>
 							<div class="sidebar_section_content">
 								<ul>
-									<li><a href="#">Wedding Dresses (23)</a></li>
-									<li><a href="#">Swimsuits (11)</a></li>
-									<li><a href="#">Jeans (61)</a></li>
-									<li><a href="#">Tops (34)</a></li>
+									<li><a href="#">Skins</a></li>
+									<li><a href="#">Mochilas</a></li>
+									<li><a href="#">Picos</a></li>
+									<li><a href="#">Ala delta</a></li>
 								</ul>
 							</div>
 						</div>
 						
 						<!-- Color -->
 						<div class="sidebar_section">
-							<div class="sidebar_title">Color</div>
+							<div class="sidebar_title">Series</div>
 							<div class="sidebar_section_content sidebar_color_content mCustomScrollbar" data-mcs-theme="minimal-dark">
 								<ul>
-									<li><a href="#"><span style="background:#a3ccff"></span>Blue (23)</a></li>
-									<li><a href="#"><span style="background:#937c6f"></span>Brown (11)</a></li>
-									<li><a href="#"><span style="background:#000000"></span>Black (61)</a></li>
-									<li><a href="#"><span style="background:#ff5c00"></span>Orange (34)</a></li>
-									<li><a href="#"><span style="background:#a3ffb2"></span>Green (17)</a></li>
+									<li><a href="#"><span style="background:#147af7"></span>Epic</a></li>
+									<li><a href="#"><span style="background:#ff0202"></span>Marvel</a></li>
+									<li><a href="#"><span style="background:#0cb7ce"></span>Iconos</a></li>
+									<li><a href="#"><span style="background:#051447"></span>DC</a></li>
+									<li><a href="#"><span style="background:#a3ffb2"></span>Legendarias</a></li>
 									<li><a href="#"><span style="background:#f52832"></span>Red (22)</a></li>
 									<li><a href="#"><span style="background:#fdabf4"></span>Pink (7)</a></li>
 									<li><a href="#"><span style="background:#ecf863"></span>Yellow (13)</a></li>

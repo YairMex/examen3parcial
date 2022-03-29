@@ -75,4 +75,154 @@ class fortniteController extends Controller
 
         return view('index', ['items' => $items, 'itemsBanner' => $itemsBanner, 'data2' => $data2, 'itemsNuevos' => $itemsNuevos]);
     }
+
+    public function categorias(){
+        return view('categories');
+    }
+
+    public function marvel(){
+
+        // Consumir skins marvel
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'outfit' && $value['rarity']['value'] == 'marvel'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('marvel',['items'=>$items]);
+    }
+
+    public function dc(){
+
+        // Consumir skins dc
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'outfit' && $value['rarity']['value'] == 'dc'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('dc',['items'=>$items]);
+    }
+
+    public function icon(){
+
+        // Consumir skins icono
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'outfit' && $value['rarity']['value'] == 'icon'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('icon',['items'=>$items]);
+    }
+
+    public function legendary(){
+
+        // Consumir skins legendarias
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'outfit' && $value['rarity']['value'] == 'legendary'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('legendary',['items'=>$items]);
+    }
+
+    public function epic(){
+
+        // Consumir skins legendarias
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'outfit' && $value['rarity']['value'] == 'epic'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('epic',['items'=>$items]);
+    }
+
+    //Ver objeto
+    public function verObjeto($id){
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br/'.$id);
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            
+        }
+
+        return view('product',['items'=>$items]);
+    }
 }

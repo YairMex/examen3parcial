@@ -16,3 +16,11 @@ use App\Http\Controllers\fortniteController;
 
 
 Route::get('/', [fortniteController::class, 'datosApi'])->name('inicio');
+Route::get('/categorias', [fortniteController::class, 'categorias'])->name('categorias');
+Route::get('/objeto/{id}', [fortniteController::class, 'verObjeto'])->name('objeto');
+Route::get('/marvel', [fortniteController::class, 'marvel'])->name('marvel');
+Route::get('/dc', [fortniteController::class, 'dc'])->name('dc');
+Route::get('/icon', [fortniteController::class, 'icon'])->name('icon');
+Route::get('/legendary', [fortniteController::class, 'legendary'])->name('legendary');
+Route::get('/epic', [fortniteController::class, 'epic'])->name('epic');
+
