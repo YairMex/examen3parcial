@@ -6,10 +6,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Wish shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/product.css">
-<link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/styles/product.css">
+<link rel="stylesheet" type="text/css" href="/styles/product_responsive.css">
 </head>
 <body>
 
@@ -33,14 +33,14 @@
 				<div class="search header_search">
 					<form action="#">
 						<input type="search" class="search_input" required="required">
-						<button type="submit" id="search_button" class="search_button"><img src="images/magnifying-glass.svg" alt=""></button>
+						<button type="submit" id="search_button" class="search_button"><img src="/images/magnifying-glass.svg" alt=""></button>
 					</form>
 				</div>
 				<div class="shopping">
 					<!-- Cart -->
 					<a href="#">
 						<div class="cart">
-							<img src="images/shopping-bag.svg" alt="">
+							<img src="/images/shopping-bag.svg" alt="">
 							<div class="cart_num_container">
 								<div class="cart_num_inner">
 									<div class="cart_num">1</div>
@@ -51,7 +51,7 @@
 					<!-- Star -->
 					<a href="#">
 						<div class="star">
-							<img src="images/star.svg" alt="">
+							<img src="/images/star.svg" alt="">
 							<div class="star_num_container">
 								<div class="star_num_inner">
 									<div class="star_num">0</div>
@@ -62,7 +62,7 @@
 					<!-- Avatar -->
 					<a href="#">
 						<div class="avatar">
-							<img src="images/avatar.svg" alt="">
+							<img src="/images/avatar.svg" alt="">
 						</div>
 					</a>
 				</div>
@@ -80,7 +80,7 @@
 		<div class="search">
 			<form action="#">
 				<input type="search" class="search_input menu_mm" required="required">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
+				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="/images/magnifying-glass.svg" alt=""></button>
 			</form>
 		</div>
 		<nav class="menu_nav">
@@ -97,7 +97,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/product.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/images/product.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -138,11 +138,11 @@
 				<!-- Product Image -->
 				<div class="col-lg-7">
 					<div class="product_image">
-						<div class="product_image_large"><img src="images/product_image_1.jpg" alt=""></div>
+						<div class="product_image_large"><img src="{{$data['images']['icon']}}" alt=""></div>
 						<div class="product_image_thumbnails d-flex flex-row align-items-start justify-content-start">
-							<div class="product_image_thumbnail" style="background-image:url(images/product_image_1.jpg)" data-image="images/product_image_1.jpg"></div>
-							<div class="product_image_thumbnail" style="background-image:url(images/product_image_2.jpg)" data-image="images/product_image_2.jpg"></div>
-							<div class="product_image_thumbnail" style="background-image:url(images/product_image_4.jpg)" data-image="images/product_image_4.jpg"></div>
+							<div class="product_image_thumbnail" style="background-image:url(/images/product_image_1.jpg)" data-image="/images/product_image_1.jpg"></div>
+							<div class="product_image_thumbnail" style="background-image:url(/images/product_image_2.jpg)" data-image="/images/product_image_2.jpg"></div>
+							<div class="product_image_thumbnail" style="background-image:url(/images/product_image_4.jpg)" data-image="/images/product_image_4.jpg"></div>
 						</div>
 					</div>
 				</div>
@@ -150,8 +150,8 @@
 				<!-- Product Content -->
 				<div class="col-lg-5">
 					<div class="product_content">
-						<div class="product_name">2 Piece Swimsuit</div>
-						<div class="product_price">$35.00</div>
+						<div class="product_name">{{$data['name']}}</div>
+						<div class="product_price">{{$data['description']}}</div>
 						<div class="rating rating_4" data-rating="4">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -221,7 +221,7 @@
 							<ul>
 								<!-- Review -->
 								<li class=" review clearfix">
-									<div class="review_image"><img src="images/review_1.jpg" alt=""></div>
+									<div class="review_image"><img src="/images/review_1.jpg" alt=""></div>
 									<div class="review_content">
 										<div class="review_name"><a href="#">Maria Smith</a></div>
 										<div class="review_date">Nov 29, 2017</div>
@@ -239,7 +239,7 @@
 								</li>
 								<!-- Review -->
 								<li class=" review clearfix">
-									<div class="review_image"><img src="images/review_2.jpg" alt=""></div>
+									<div class="review_image"><img src="/images/review_2.jpg" alt=""></div>
 									<div class="review_content">
 										<div class="review_name"><a href="#">Maria Smith</a></div>
 										<div class="review_date">Nov 29, 2017</div>
@@ -288,7 +288,7 @@
 
 	<div class="newsletter">
 		<div class="newsletter_content">
-			<div class="newsletter_image" style="background-image:url(images/newsletter.jpg)"></div>
+			<div class="newsletter_image" style="background-image:url(/images/newsletter.jpg)"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -347,11 +347,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/product_custom.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/styles/bootstrap4/popper.js"></script>
+<script src="/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/js/product_custom.js"></script>
 </body>
 </html>

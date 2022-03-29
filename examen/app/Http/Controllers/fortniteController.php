@@ -235,19 +235,8 @@ class fortniteController extends Controller
         $client = new \GuzzleHttp\Client();
         $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br/'.$id);
         $data = json_decode($response->getBody()->getContents(), true);
-        $items = [];
-        foreach ($data['data'] as $value) {
-                $items[] = [
-                    'name' => $value['name'],
-                    'image' => $value['images']['icon'],
-                    'description' => $value['description'],
-                    'type' => $value['type']['displayValue'],
-                    'rarity' => $value['rarity']['displayValue'],
-                    'id' => $value['id']
-                ];
-            
-        }
-
-        return view('product',['items'=>$items]);
+    
+        /* echo json_encode($data['data']['name']); */
+        return view('product',['data'=>$data['data']]);
     }
 }
