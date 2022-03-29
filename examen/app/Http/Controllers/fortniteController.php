@@ -205,6 +205,31 @@ class fortniteController extends Controller
         return view('epic',['items'=>$items]);
     }
 
+    public function gaming(){
+
+        // Consumir skins gaming
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'outfit' && $value['rarity']['value'] == 'gaminglegends'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('gaming',['items'=>$items]);
+    }
+
     //Ver objeto
     public function verObjeto($id){
         $client = new \GuzzleHttp\Client();

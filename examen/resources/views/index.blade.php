@@ -68,6 +68,7 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
+				<li class="menu_mm"><a href="#">Inicio</a></li>
 				<li class="menu_mm"><a href="#">Skins</a></li>
 				<li class="menu_mm"><a href="#">Accesorios</a></li>
 				<li class="menu_mm"><a href="#">Recientes</a></li>
