@@ -67,7 +67,7 @@ body
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
-	background: #FFFFFF;
+	background: #000f53;
 	color: #2f2f2f;
 }
 div
@@ -714,7 +714,7 @@ section
 {
 	padding-top: 94px;
 	padding-bottom: 98px;
-	background: #FFFFFF;
+	background: #000f53;
 }
 
 /*********************************
@@ -807,7 +807,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 600;
-	color: #232323;
+	color: #ffffff;
 	line-height: 0.75;
 }
 .product_price
@@ -815,7 +815,7 @@ section
 	font-size: 24px;
 	font-weight: 600;
 	margin-top: 9px;
-	color: #8a8a8a;
+	color: #c2c2c2;
 }
 .rating
 {
@@ -874,7 +874,7 @@ section
 .in_stock_container span
 {
 	font-size: 14px;
-	color: #232323;
+	color: #ffffff;
 	margin-left: 7px;
 }
 .product_text
@@ -894,7 +894,7 @@ section
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 600;
-	color: #232323;
+	color: #ffffff;
 	vertical-align: middle;
 }
 .product_quantity
@@ -997,7 +997,7 @@ section
 	margin-right: 15px;
 	font-size: 14px;
 	font-weight: 600;
-	color: #232323;
+	color: #ffffff;
 }
 .regular_radio
 {

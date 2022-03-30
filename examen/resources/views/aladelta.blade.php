@@ -1,12 +1,4 @@
-@extends('layouts.layout')
-
-@section('texto')
-<div class="home_title">{{$texto->texto}}</div>
-@endsection
-
-
-							
-
+@extends('layouts.layout2')
 
 @section('skins')
 <div class="product_grid">
@@ -24,3 +16,4 @@
 	@endforeach
 </div>
 @endsection
+

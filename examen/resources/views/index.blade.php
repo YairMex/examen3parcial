@@ -26,11 +26,11 @@
 			<div class="logo"><a href="#">BVLLS</a></div>
 			<nav class="main_nav">
 				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="categories.html">Skins</a></li>
+					<li><a href="{{route('inicio')}}">Inicio</a></li>
+					<li><a href="{{route('categorias')}}">Categorias</a></li>
 					<li><a href="categories.html">Accesorios</a></li>
-					<li><a href="categories.html">Recientes</a></li>
-					<li><a href="contact.html">Contacto</a></li>
+					<li><a href="{{route('mapa')}}">Mapa</a></li>
+					<li><a href="{{route('contacto')}}">Contacto</a></li>
 				</ul>
 			</nav>
 			<div class="header_content ml-auto">
@@ -91,8 +91,8 @@
 					<div class="home_slider_background" style="background-image:url(images/pride.jpg)"></div>
 					<div class="home_slider_content">
 						<div class="home_slider_content_inner">
-							<div class="home_slider_subtitle">Promo Prices</div>
-							<div class="home_slider_title">New Collection</div>
+							<div class="home_slider_subtitle">Todo sobre</div>
+							<div class="home_slider_title">Cosmeticos de Fortnite</div>
 						</div>	
 					</div>
 				</div>
@@ -102,8 +102,8 @@
 					<div class="home_slider_background" style="background-image:url(images/ariana.jpg)"></div>
 					<div class="home_slider_content">
 						<div class="home_slider_content_inner">
-							<div class="home_slider_subtitle">Promo Prices</div>
-							<div class="home_slider_title">New Collection</div>
+							<div class="home_slider_subtitle">Todo sobre</div>
+							<div class="home_slider_title">Cosmeticos de Fortnite</div>
 						</div>	
 					</div>
 				</div>
@@ -113,8 +113,8 @@
 					<div class="home_slider_background" style="background-image:url(images/batman.jpg)"></div>
 					<div class="home_slider_content">
 						<div class="home_slider_content_inner">
-							<div class="home_slider_subtitle">Promo Prices</div>
-							<div class="home_slider_title">New Collection</div>
+							<div class="home_slider_subtitle">Todo sobre</div>
+							<div class="home_slider_title">Cosmeticos de Fortnite</div>
 						</div>	
 					</div>
 				</div>
@@ -167,13 +167,13 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="{{$item['image']}}" alt="">
+							<a href="{{route('objeto', $item['id'])}}"><img src="{{$item['image']}}" alt=""></a>
 							<div class="promo_content promo_content_1">
 								<div class="promo_title">{{$item['name']}}</div>
 								<div class="promo_subtitle">{{$item['type']}}</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">{{$item['rarity']}}</a></div>
+						<div class="promo_link"><a href="{{route('objeto', $item['id'])}}">{{$item['rarity']}}</a></div>
 					</div>
 				</div>
 				@php
@@ -207,12 +207,12 @@
 					<div class="col-lg-4 product_col">
 						<div class="product">
 							<div class="product_image">
-								<img src="{{$item['image']}}" alt="">
+								<a href="{{route('objeto', $item['id'])}}"><img src="{{$item['image']}}" alt=""></a>
 							</div>
 							<div class="product_content clearfix">
 								<div class="product_info">
 									<div class="product_name">{{$item['rarity']}}</div>
-									<div class="product_price"><a href="product.html">{{$item['name']}}</a></div>
+									<div class="product_price"><a href="{{route('objeto', $item['id'])}}">{{$item['name']}}</a></div>
 								</div>
 							</div>
 						</div>
@@ -242,7 +242,7 @@
 					<div class="extra_2_bottom">Ubicaciones</div>
 				</div>
 				<div class="extra_2_text">*El mapa y las ubicaciones pueden cambiar a lo largo de la temporada.</div>
-				<div class="button extra_2_button"><a href="checkout.html">Ver más</a></div>
+				<div class="button extra_2_button"><a href="{{route('mapa')}}">Ver más</a></div>
 			</div>
 		</div>
 	</div>
@@ -256,11 +256,11 @@
 				<div class="col">
 					<div class="gallery_title text-center">
 						<ul>
-							<li><a href="#">Banners</a></li>
+							<li><a href="{{route('banners')}}">Banners</a></li>
 						</ul>
 					</div>
 					<div class="gallery_text text-center">Más divertidos de lo que parecen.</div>
-					<div class="button gallery_button"><a href="#">Ver más</a></div>
+					<div class="button gallery_button"><a href="{{route('banners')}}">Ver más</a></div>
 				</div>
 			</div>
 		</div>	
@@ -271,7 +271,7 @@
 				@foreach($itemsBanner as $item)
 					<!-- Gallery Item -->
 					<div class="owl-item gallery_item">
-						<a class="colorbox" href="images/gallery_1.jpg">
+						<a  href="{{route('banners')}}">
 							<img src="{{$item['image']}}" alt="">
 						</a>
 					</div>
@@ -286,13 +286,13 @@
 
 	<div class="newsletter">
 		<div class="newsletter_content">
-			<div class="newsletter_image" style="background-image:url(images/newsletter.jpg)"></div>
+			<div class="newsletter_image" style="background-image:url(images/batman.jpg)"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="section_title_container text-center">
-							<div class="section_subtitle">only the best</div>
-							<div class="section_title">subscribe for a 20% discount</div>
+							<div class="section_subtitle">no te pierdas nada</div>
+							<div class="section_title">Suscribete para recibir noticias</div>
 						</div>
 					</div>
 				</div>
@@ -300,11 +300,11 @@
 					<div class="col-lg-10 offset-lg-1">
 						<div class="newsletter_form_container">
 							<form action="#">
-								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
-								<button type="submit" class="newsletter_button">subscribe</button>
+								<input type="email" class="newsletter_input" required="required" placeholder="E-mail">
+								<button type="submit" class="newsletter_button">subscribir</button>
 							</form>
 						</div>
-						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
+						
 					</div>
 				</div>
 			</div>
@@ -320,24 +320,24 @@
 					<div class="footer_logo"><a href="#">BVLLS</a></div>
 					<nav class="footer_nav">
 						<ul>
-							<li><a href="index.html">Inicio</a></li>
-							<li><a href="categories.html">skins</a></li>
+							<li><a href="{{route('inicio')}}">Inicio</a></li>
+							<li><a href="{{route('categorias')}}">Categorias</a></li>
 							<li><a href="categories.html">accessorios</a></li>
-							<li><a href="categories.html">recientes</a></li>
-							<li><a href="contact.html">contacto</a></li>
+							<li><a href="{{route('mapa')}}">Mapa</a></li>
+							<li><a href="{{route('contacto')}}">contacto</a></li>
 						</ul>
 					</nav>
 					<div class="footer_social">
 						<ul>
-							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.facebook.com/Mex4Mafia" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="https://github.com/YairMex" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/yairmellody/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://wa.me/525585281986" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+							<li><a href="https://twitter.com/laravelphp" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Este sitio web fue hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">BVLLS WEB</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Este sitio web fue hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://github.com/YairMex" target="_blank">BVLLS WEB</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
 			</div>

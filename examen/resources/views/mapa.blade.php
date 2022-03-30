@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{{$data['name']}}</title>
+<title></title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Wish shop project">
@@ -128,33 +128,40 @@
 				<!-- Product Image -->
 				<div class="col-lg-7">
 					<div class="product_image">
-						<div class="product_image_large"><img src="{{$data['images']['icon']}}" alt=""></div>
+						<div class="product_image_large"><img src="{{$data2['data']['images']['pois']}}" alt=""></div>
 						
 					</div>
 				</div>
+			</div>
 
-				<!-- Product Content -->
-				<div class="col-lg-5">
-					<div class="product_content">
-						<div class="product_name">{{$data['name']}}</div>
-						<div class="product_price">{{$data['type']['displayValue']}}</div>
-						<div class="product_text">
-							<p>{{$data['description']}}</p>
-						</div>
-						<!-- Product Quantity -->
-						<div class="product_quantity_container">
-							<span>Serie: {{$data['rarity']['displayValue']}}</span>
-						</div>
-						<!-- Product Size -->
-						<div class="product_size_container">
-							<span>{{$data['introduction']['text']}}</span>
-							
-						</div>
-					</div>
+			<!-- Reviews -->
+
+	<div class="row">
+		<div class="col">
+			<div class="reviews">
+				<div class="reviews_title">Ubicaciones</div>
+				<div class="reviews_container">
+					<ul>
+						@foreach ($items as $item)
+							<!-- Review -->
+							<li class=" review clearfix">
+								<div class="review_content">
+									<div class="review_name">{{$item['nombre']}}</div>
+									<div class="review_text">
+										<p>Coordenadas X:{{$item['coordenadasX']}} <br>Coordenadas Y:{{$item['coordenadasY']}} <br>Coordenadas Z:{{$item['coordenadasZ']}}</p>
+									</div>
+								</div>
+							</li>
+						@endforeach
+					</ul>
 				</div>
 			</div>
+		</div>
+	</div>
 		</div>		
 	</div>
+
+	
 
 	<!-- Newsletter -->
 

@@ -64,7 +64,7 @@ body
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
-	background: #FFFFFF;
+	background: #000f53;
 	color: #2f2f2f;
 }
 div
@@ -916,11 +916,11 @@ section
 {
 	float: left;
 }
-.product_name a
+.product_name 
 {
 	font-size: 16px;
 	font-weight: 600;
-	color: #232323;
+	color: #ffffff;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;

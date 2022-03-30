@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Ubicacion;
+use App\Models\Fortnite;
 
 class fortniteController extends Controller
 {
@@ -77,6 +79,7 @@ class fortniteController extends Controller
     }
 
     public function categorias(){
+
         return view('categories');
     }
 
@@ -101,8 +104,21 @@ class fortniteController extends Controller
             
         }
 
+        $valores = Fortnite::where('id',1)->get();
+        $texto=[];
+        foreach ($valores as $value) {
+            $texto[]=[
+                'id' => $value['id'],
+                'texto' => $value['texto'],
+                'slug' => $value['slug'],
+                'imagen' => $value['imagen']
+            ];
+            
 
-        return view('marvel',['items'=>$items]);
+        } 
+
+        echo json_encode($texto);
+        //return view('marvel',['items'=>$items, 'texto'=>$texto]);
     }
 
     public function dc(){
@@ -239,4 +255,159 @@ class fortniteController extends Controller
         /* echo json_encode($data['data']['name']); */
         return view('product',['data'=>$data['data']]);
     }
+
+    //Mapa
+    public function mapa(){
+        $client2 = new \GuzzleHttp\Client();
+        $response2 = $client2->request('GET', 'https://fortnite-api.com/v1/map');
+        $data2 = json_decode($response2->getBody()->getContents(), true);
+
+        $ubicaciones = Ubicacion::all();
+        $items = [];
+        foreach ($ubicaciones as $value) {
+            $items[] = [
+                'nombre' => $value['nombre'],
+                'coordenadasX' => $value['coordenadasX'],
+                'coordenadasY' => $value['coordenadasY'],
+                'coordenadasZ' => $value['coordenadasZ'],
+                'slug' => $value['slug'],
+                'id' => $value['id']
+            ];
+        }
+
+        return view('mapa', ['data2'=>$data2, 'items'=>$items]);
+    }
+
+    //Contacto
+    public function contacto(){
+        return view('contact');
+    }
+
+    //Mochilas
+    public function mochilas(){
+
+        
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'backpack' ){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('mochilas',['items'=>$items]);
+    }
+
+    //Picos
+    public function picos(){
+
+        
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'pickaxe' ){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('picos',['items'=>$items]);
+    }
+
+    //Emotes
+    public function emotes(){
+
+        
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'emote' ){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('emotes',['items'=>$items]);
+    }
+
+    // Ala delta
+    public function aladelta(){
+
+        
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://fortnite-api.com/v2/cosmetics/br');
+        $data = json_decode($response->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data['data'] as $value) {
+            if($value['type']['value'] == 'glider' ){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'type' => $value['type']['displayValue'],
+                    'rarity' => $value['rarity']['displayValue'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+
+
+        return view('aladelta',['items'=>$items]);
+    }
+
+    //Banners
+    public function banners(){
+        $client1 = new \GuzzleHttp\Client();
+        $response1 = $client1->request('GET', 'https://fortnite-api.com/v1/banners');
+        $data1 = json_decode($response1->getBody()->getContents(), true);
+        $items = [];
+        foreach ($data1['data'] as $value) {
+            if($value['category'] == 'BattleRoyale'){
+                $items[] = [
+                    'name' => $value['name'],
+                    'image' => $value['images']['icon'],
+                    'description' => $value['description'],
+                    'category' => $value['category'],
+                    'id' => $value['id']
+                ];
+            }
+            
+        }
+        
+        return view('banners', ['items'=>$items]);
+    }
+
+
 }

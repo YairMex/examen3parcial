@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Categories</title>
+<title>Categorias</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Wish shop project">
@@ -99,18 +99,17 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/categories.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/season 7.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="home_container">
 						<div class="home_content">
-							<div class="home_title">Woman</div>
+							<div class="home_title">Categorias</div>
 							<div class="breadcrumbs">
 								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li>Woman</li>
-									<li>Accessories</li>
+									<li><a href="{{route('inicio')}}">Inicio</a></li>
+									<li><a href="{{route('categorias')}}">Categorias</a></li>
 								</ul>
 							</div>
 						</div>
@@ -136,10 +135,10 @@
 							<div class="sidebar_title">Categorias</div>
 							<div class="sidebar_section_content">
 								<ul>
-									<li><a href="#">Skins</a></li>
-									<li><a href="#">Mochilas</a></li>
-									<li><a href="#">Picos</a></li>
-									<li><a href="#">Ala delta</a></li>
+									<li><a href="{{route('emotes')}}">Emotes</a></li>
+									<li><a href="{{route('mochilas')}}">Mochilas</a></li>
+									<li><a href="{{route('picos')}}">Picos</a></li>
+									<li><a href="{{route('aladelta')}}">Ala delta</a></li>
 								</ul>
 							</div>
 						</div>
@@ -149,170 +148,18 @@
 							<div class="sidebar_title">Series</div>
 							<div class="sidebar_section_content sidebar_color_content mCustomScrollbar" data-mcs-theme="minimal-dark">
 								<ul>
-									<li><a href="#"><span style="background:#147af7"></span>Epic</a></li>
-									<li><a href="#"><span style="background:#ff0202"></span>Marvel</a></li>
-									<li><a href="#"><span style="background:#0cb7ce"></span>Iconos</a></li>
-									<li><a href="#"><span style="background:#051447"></span>DC</a></li>
-									<li><a href="#"><span style="background:#a3ffb2"></span>Legendarias</a></li>
-									<li><a href="#"><span style="background:#f52832"></span>Red (22)</a></li>
-									<li><a href="#"><span style="background:#fdabf4"></span>Pink (7)</a></li>
-									<li><a href="#"><span style="background:#ecf863"></span>Yellow (13)</a></li>
+									<li><a href="{{route('epic')}}"><span style="background:#147af7"></span>Epic</a></li>
+									<li><a href="{{route('marvel')}}"><span style="background:#ff0202"></span>Marvel</a></li>
+									<li><a href="{{route('icon')}}"><span style="background:#0cb7ce"></span>Iconos</a></li>
+									<li><a href="{{route('dc')}}"><span style="background:#051447"></span>DC</a></li>
+									<li><a href="{{route('legendary')}}"><span style="background:#a3ffb2"></span>Legendarias</a></li>
+									<li><a href="{{route('gaming')}}"><span style="background:#032e21"></span>Gaming</a></li>
 								</ul>
-							</div>
-						</div>
-
-						<!-- Size -->
-						<div class="sidebar_section">
-							<div class="sidebar_title">Size</div>
-							<div class="sidebar_section_content">
-								<ul>
-									<li><a href="#">Small S (23)</a></li>
-									<li><a href="#">Medium M (11)</a></li>
-									<li><a href="#">Large L (61)</a></li>
-									<li><a href="#">Extra Large XL (34)</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Price -->
-						<div class="sidebar_section">
-							<div class="sidebar_title">Price</div>
-							<div class="sidebar_section_content">
-								<div class="filter_price">
-									<div id="slider-range" class="slider_range"></div>
-									<p><input type="text" id="amount" class="amount" readonly style="border:0; font-weight:bold;"></p>
-									<div class="clear_price_btn">Clear Price</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Best Sellers -->
-
-						<div class="sidebar_section">
-							<div class="sidebar_title">Best Sellers</div>
-							<div class="sidebar_section_content bestsellers_content">
-								<ul>
-									<!-- Best Seller Item -->
-									<li class="clearfix">
-										<div class="best_image"><img src="images/best_1.jpg" alt=""></div>
-										<div class="best_content">
-											<div class="best_title"><a href="product.html">Blue dress with dots</a></div>
-											<div class="best_price">$45</div>
-										</div>
-										<div class="best_buy">+</div>
-									</li>
-
-									<!-- Best Seller Item -->
-									<li class="clearfix">
-										<div class="best_image"><img src="images/best_2.jpg" alt=""></div>
-										<div class="best_content">
-											<div class="best_title"><a href="product.html">White t-shirt</a></div>
-											<div class="best_price">$45</div>
-										</div>
-										<div class="best_buy">+</div>
-									</li>
-
-									<!-- Best Seller Item -->
-									<li class="clearfix">
-										<div class="best_image"><img src="images/best_3.jpg" alt=""></div>
-										<div class="best_content">
-											<div class="best_title"><a href="product.html">Blue dress with dots</a></div>
-											<div class="best_price">$45</div>
-										</div>
-										<div class="best_buy">+</div>
-									</li>
-
-									<!-- Best Seller Item -->
-									<li class="clearfix">
-										<div class="best_image"><img src="images/best_4.jpg" alt=""></div>
-										<div class="best_content">
-											<div class="best_title"><a href="product.html">White t-shirt</a></div>
-											<div class="best_price">$45</div>
-										</div>
-										<div class="best_buy">+</div>
-									</li>
-
-								</ul>
-							</div>
-						</div>
-
-						<!-- Size -->
-						<div class="sidebar_section sidebar_options">
-							<div class="sidebar_section_content">
-
-								<!-- Option Item -->
-								<div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-									<div class="option_image"><img src="images/option_1.png" alt=""></div>
-									<div class="option_content">
-										<div class="option_title">30 Days Returns</div>
-										<div class="option_subtitle">No questions asked</div>
-									</div>
-								</div>
-
-								<!-- Option Item -->
-								<div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-									<div class="option_image"><img src="images/option_2.png" alt=""></div>
-									<div class="option_content">
-										<div class="option_title">Free Delivery</div>
-										<div class="option_subtitle">On all orders</div>
-									</div>
-								</div>
-
-								<!-- Option Item -->
-								<div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-									<div class="option_image"><img src="images/option_3.png" alt=""></div>
-									<div class="option_content">
-										<div class="option_title">Secure Payments</div>
-										<div class="option_subtitle">No need to worry</div>
-									</div>
-								</div>
-
-								<!-- Option Item -->
-								<div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-									<div class="option_image"><img src="images/option_4.png" alt=""></div>
-									<div class="option_content">
-										<div class="option_title">24/7 Support</div>
-										<div class="option_subtitle">Just call us</div>
-									</div>
-								</div>
-
 							</div>
 						</div>
 
 					</div>
 
-					<div class="current_page">Woman's Fashion</div>
-				</div>
-				<div class="col-12">
-					<div class="product_sorting clearfix">
-						<div class="view">
-							<div class="view_box box_view"><i class="fa fa-th-large" aria-hidden="true"></i></div>
-							<div class="view_box detail_view"><i class="fa fa-bars" aria-hidden="true"></i></div>
-						</div>
-						<div class="sorting">
-							<ul class="item_sorting">
-								<li>
-									<span class="sorting_text">Show all</span>
-									<i class="fa fa-caret-down" aria-hidden="true"></i>
-									<ul>
-										<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Show All</span></li>
-										<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Price</span></li>
-										<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "stars" }'><span>Stars</span></li>
-									</ul>
-								</li>
-								<li>
-									<span class="sorting_text">Show</span>
-									<span class="num_sorting_text">12</span>
-									<i class="fa fa-caret-down" aria-hidden="true"></i>
-									<ul>
-										<li class="num_sorting_btn"><span>3</span></li>
-										<li class="num_sorting_btn"><span>6</span></li>
-										<li class="num_sorting_btn"><span>12</span></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -604,31 +451,6 @@
 				</div>
 			</div>
 
-		</div>
-		
-		<!-- Sidebar Right -->
-
-		<div class="sidebar_right clearfix">
-
-			<!-- Promo 1 -->
-			<div class="sidebar_promo_1 sidebar_promo d-flex flex-column align-items-center justify-content-center">
-				<div class="sidebar_promo_image" style="background-image: url(images/sidebar_promo_1.jpg)"></div>
-				<div class="sidebar_promo_content text-center">
-					<div class="sidebar_promo_title">30%<span>off</span></div>
-					<div class="sidebar_promo_subtitle">On all shoes</div>
-					<div class="sidebar_promo_button"><a href="checkout.html">check out</a></div>
-				</div>
-			</div>
-
-			<!-- Promo 2 -->
-			<div class="sidebar_promo_2 sidebar_promo">
-				<div class="sidebar_promo_image" style="background-image: url(images/sidebar_promo_2.jpg)"></div>
-				<div class="sidebar_promo_content text-center">
-					<div class="sidebar_promo_title">30%<span>off</span></div>
-					<div class="sidebar_promo_subtitle">On all shoes</div>
-					<div class="sidebar_promo_button"><a href="checkout.html">check out</a></div>
-				</div>
-			</div>
 		</div>
 
 	</div>
