@@ -1,5 +1,9 @@
 @extends('layouts.layout2')
 
+@section('titulo')
+<li>Ala delta</li>
+@endsection
+
 @section('titulo1')
 <title>Ala deltas</title>
 @endsection

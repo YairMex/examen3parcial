@@ -86,9 +86,9 @@
 							@section('texto')@show
 							<div class="breadcrumbs">
 								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li>Categorias</li>
-									<li>Marvel</li>
+									<li><a href="{{route('inicio')}}">Inicio</a></li>
+									<li><a href="{{route('categorias')}}">Categorias</a></li>
+									@section('titulo')@show
 								</ul>
 							</div>
 						</div>

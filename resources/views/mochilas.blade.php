@@ -1,5 +1,9 @@
 @extends('layouts.layout2')
 
+@section('titulo')
+<li>Mochilas</li>
+@endsection
+
 @section('titulo1')
 <title>Mochilas</title>
 @endsection

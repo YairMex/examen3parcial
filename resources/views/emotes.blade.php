@@ -1,5 +1,9 @@
 @extends('layouts.layout2')
 
+@section('titulo')
+<li>Emotes</li>
+@endsection
+
 @section('titulo1')
 <title>Emotes</title>
 @endsection
