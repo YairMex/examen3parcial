@@ -711,7 +711,7 @@ section
 {
 	padding-top: 94px;
 	padding-bottom: 98px;
-	background: #FFFFFF;
+	background: #000f53;
 }
 .current_page
 {
@@ -1113,7 +1113,7 @@ section
 .sidebar_section_content ul li a
 {
 	font-size: 14px;
-	color: #232323;
+	color: #ffffff;
 	line-height: 47px;
 }
 .sidebar_color_content
