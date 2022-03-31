@@ -1,10 +1,16 @@
 @extends('layouts.layout')
 
 @section('texto')
-<div class="home_title">{{$texto->texto}}</div>
+<div class="home_title">Todos los conjuntos de las colaboraciones de Marvel</div>
 @endsection
 
+@section('titulo1')
+<title>Marvel</title>
+@endsection
 
+@section('titulo')
+<li>Marvel</li>
+@endsection
 							
 
 

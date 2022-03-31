@@ -261,7 +261,7 @@ section
 	font-family: 'Lucida', serif;
 	font-size: 60px;
 	text-transform: uppercase;
-	color: #2f2f2f;
+	color: #ffffff;
 	margin-top: -4px;
 }
 .button
@@ -1142,7 +1142,7 @@ section
 {
 	font-family: 'Lucida', serif;
 	font-size: 200px;
-	color: #ffffff;
+	color: #327ad8;
 	line-height: 0.75;
 	-webkit-transform: rotate(-12deg);
 	-moz-transform: rotate(-12deg);
@@ -1158,7 +1158,7 @@ section
 	font-family: 'Beyond', sans-serif;
 	font-size: 72px;
 	line-height: 0.75;
-	color: #232323;
+	color: #ffffff;
 }
 .extra_2_bottom
 {
@@ -1168,7 +1168,7 @@ section
 	font-family: 'Beyond', sans-serif;
 	font-size: 72px;
 	line-height: 0.75;
-	color: #232323;
+	color: #ffffff;
 }
 .extra_2_text
 {
@@ -1436,7 +1436,7 @@ section
 {
 	font-family: 'Lucida', serif;
 	font-size: 60px;
-	color: #232323;
+	color: #ffffff;
 }
 .footer_nav
 {
@@ -1455,7 +1455,7 @@ section
 {
 	font-size: 12px;
 	text-transform: uppercase;
-	color: #232323;
+	color: #ffffff;
 	font-weight: 600;
 	letter-spacing: 0.2em;
 	-webkit-transition: all 200ms ease;
@@ -1466,7 +1466,7 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #937c6f;
+	color: #0bc2e2;
 }
 .footer_social
 {
@@ -1484,7 +1484,7 @@ section
 .footer_social ul li a i
 {
 	font-size: 24px;
-	color: #937c6f;
+	color: #0bc2e2;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -1501,5 +1501,5 @@ section
 	padding-bottom: 13px;
 	font-family: 'Lucida', serif;
 	font-size: 12px;
-	color: #232323;
+	color: #ffffff;
 }

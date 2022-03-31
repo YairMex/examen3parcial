@@ -1,5 +1,9 @@
 @extends('layouts.layout2')
 
+@section('titulo1')
+<title>Banners</title>
+@endsection
+
 @section('skins')
 <div class="product_grid">
 	@foreach($items as $item)

@@ -1,5 +1,17 @@
 @extends('layouts.layout')
 
+@section('texto')
+<div class="home_title">Todos los conjuntos de las colaboraciones de Leyendas de Gaming</div>
+@endsection
+
+@section('titulo1')
+<title>Leyendas del gaming</title>
+@endsection
+
+@section('titulo')
+<li>Leyendas del gaming</li>
+@endsection
+
 @section('skins')
 <div class="product_grid">
 	@foreach($items as $item)

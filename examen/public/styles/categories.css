@@ -1543,7 +1543,7 @@ section
 {
 	font-family: 'Lucida', serif;
 	font-size: 60px;
-	color: #232323;
+	color: #ffffff;
 }
 .footer_nav
 {
@@ -1562,7 +1562,7 @@ section
 {
 	font-size: 12px;
 	text-transform: uppercase;
-	color: #232323;
+	color: #ffffff;
 	font-weight: 600;
 	letter-spacing: 0.2em;
 	-webkit-transition: all 200ms ease;
@@ -1573,7 +1573,7 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #937c6f;
+	color: #1b6edb;
 }
 .footer_social
 {
@@ -1591,7 +1591,7 @@ section
 .footer_social ul li a i
 {
 	font-size: 24px;
-	color: #937c6f;
+	color: #1b6edb;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -1608,5 +1608,5 @@ section
 	padding-bottom: 13px;
 	font-family: 'Lucida', serif;
 	font-size: 12px;
-	color: #232323;
+	color: #ffffff;
 }

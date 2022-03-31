@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Categories</title>
+@section('titulo1')@show
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Wish shop project">
@@ -21,14 +21,14 @@
 
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
-			<div class="logo"><a href="#">BVLLS</a></div>
+			<div class="logo"><a href="{{route('inicio')}}">BVLLS</a></div>
 			<nav class="main_nav">
 				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="categories.html">Skins</a></li>
-					<li><a href="categories.html">Accesorios</a></li>
-					<li><a href="categories.html">Recientes</a></li>
-					<li><a href="contact.html">Contacto</a></li>
+					<li><a href="{{route('inicio')}}">Inicio</a></li>
+					<li><a href="{{route('categorias')}}">Categorias</a></li>
+					<li><a href="{{route('banners')}}">Banners</a></li>
+					<li><a href="{{route('mapa')}}">Mapa</a></li>
+					<li><a href="{{route('contacto')}}">Contacto</a></li>
 				</ul>
 			</nav>
 			<div class="header_content ml-auto">
@@ -56,7 +56,7 @@
 
 	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">BVLLS</a></div>
+		<div class="logo menu_mm"><a href="{{route('inicio')}}">BVLLS</a></div>
 		<div class="search">
 			<form action="#">
 				<input type="search" class="search_input menu_mm" required="required">
@@ -65,11 +65,11 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="menu_mm"><a href="#">Inicio</a></li>
-				<li class="menu_mm"><a href="#">Skins</a></li>
-				<li class="menu_mm"><a href="#">Accesorios</a></li>
-				<li class="menu_mm"><a href="#">Recientes</a></li>
-				<li class="menu_mm"><a href="#">Contacto</a></li>
+				<li class="menu_mm"><a href="{{route('inicio')}}">Inicio</a></li>
+				<li class="menu_mm"><a href="{{route('categorias')}}">Categorias</a></li>
+				<li class="menu_mm"><a href="{{route('banners')}}">Banners</a></li>
+				<li class="menu_mm"><a href="{{route('mapa')}}">Mapa</a></li>
+				<li class="menu_mm"><a href="{{route('contacto')}}">Contacto</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -77,7 +77,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="https://compass-ssl.xbox.com/assets/54/f9/54f9ed2b-1092-4e79-9bec-333f913d918f.jpg?n=Fortnite_gallery-0_1350x759_01.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/cap3s2.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -86,9 +86,9 @@
 							@section('texto')@show
 							<div class="breadcrumbs">
 								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li>Categorias</li>
-									<li>Marvel</li>
+									<li><a href="{{route('inicio')}}">Inicio</a></li>
+									<li><a href="{{route('categorias')}}">Categorias</a></li>
+									@section('titulo')@show
 								</ul>
 							</div>
 						</div>
@@ -130,13 +130,13 @@
 
 	<div class="newsletter">
 		<div class="newsletter_content">
-			<div class="newsletter_image" style="background-image:url(images/newsletter.jpg)"></div>
+			<div class="newsletter_image" style="background-image:url(images/batman.jpg)"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="section_title_container text-center">
-							<div class="section_subtitle">only the best</div>
-							<div class="section_title">subscribe for a 20% discount</div>
+							<div class="section_subtitle">no te pierdas nada</div>
+							<div class="section_title">Suscribete para recibir noticias</div>
 						</div>
 					</div>
 				</div>
@@ -145,10 +145,9 @@
 						<div class="newsletter_form_container">
 							<form action="#">
 								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
-								<button type="submit" class="newsletter_button">subscribe</button>
+								<button type="submit" class="newsletter_button">subscribir</button>
 							</form>
 						</div>
-						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
 					</div>
 				</div>
 			</div>
@@ -161,28 +160,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="footer_logo"><a href="#">BVLLS</a></div>
+					<div class="footer_logo"><a href="{{route('inicio')}}">BVLLS</a></div>
 					<nav class="footer_nav">
 						<ul>
-							<li><a href="index.html">Inicio</a></li>
-							<li><a href="categories.html">skins</a></li>
-							<li><a href="categories.html">accessorios</a></li>
-							<li><a href="categories.html">recientes</a></li>
-							<li><a href="contact.html">contacto</a></li>
+							<li><a href="{{route('inicio')}}">Inicio</a></li>
+							<li><a href="{{route('categorias')}}">Categorias</a></li>
+							<li><a href="{{route('banners')}}">Banners</a></li>
+							<li><a href="{{route('mapa')}}">Mapa</a></li>
+							<li><a href="{{route('contacto')}}">contacto</a></li>
 						</ul>
 					</nav>
 					<div class="footer_social">
 						<ul>
-							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.facebook.com/Mex4Mafia" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="https://github.com/YairMex" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/yairmellody/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://wa.me/525585281986" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+							<li><a href="https://twitter.com/laravelphp" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Este sitio web fue hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">BVLLS WEB</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Este sitio web fue hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://github.com/YairMex" target="_blank">BVLLS WEB</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
 			</div>
 		</div>

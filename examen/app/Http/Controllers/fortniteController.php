@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Ubicacion;
 use App\Models\Fortnite;
+use DB;
+use Illuminate\Support\Facades\DB as FacadesDB;
 
 class fortniteController extends Controller
 {
@@ -104,9 +106,11 @@ class fortniteController extends Controller
             
         }
 
-        $valores = Fortnite::where('id',1)->get();
+        //$hola = DB::table('items')->groupBy('texto')->get();
+
+        /* $valores = Fortnite::where('id',1)->get();
         $texto=[];
-        foreach ($valores as $value) {
+        /* foreach ($valores as $value) {
             $texto[]=[
                 'id' => $value['id'],
                 'texto' => $value['texto'],
@@ -115,10 +119,10 @@ class fortniteController extends Controller
             ];
             
 
-        } 
+        }  */
 
-        echo json_encode($texto);
-        //return view('marvel',['items'=>$items, 'texto'=>$texto]);
+        //echo json_encode($hola['texto']);
+        return view('marvel',['items'=>$items]);
     }
 
     public function dc(){
