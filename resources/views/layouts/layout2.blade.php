@@ -28,7 +28,7 @@
 					<li><a href="{{route('categorias')}}">Categorias</a></li>
 					<li><a href="{{route('banners')}}">Banners</a></li>
 					<li><a href="{{route('mapa')}}">Mapa</a></li>
-					<li><a href="{{route('contacto')}}">Contacto</a></li>
+					<li><a href="public/images/reinscripcion.pdf">Contacto</a></li>
 				</ul>
 			</nav>
 			<div class="header_content ml-auto">
